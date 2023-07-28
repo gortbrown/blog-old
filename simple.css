@@ -9,8 +9,8 @@
   --standard-border-radius: 5px;
 
   /* Default (light) theme */
-  --bg: #231f24;
-  --accent-bg: #231f24;
+  --bg: #000000;
+  --accent-bg: #000000;
   --text: #dcdcdc;
   --text-light: #ababab;
   --border: #c300ff ;
