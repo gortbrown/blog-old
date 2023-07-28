@@ -25,14 +25,15 @@
   :root,
   ::backdrop {
     color-scheme: dark;
-    --bg: #312c32;
-    --accent-bg: #312c32;
+    --bg: #171717;
+    --accent-bg: #171717;
     --text: #dcdcdc;
     --text-light: #ababab;
-    --accent: #ff0000;
-    --code: #f06292;
-    --preformatted: #ccc;
-    --disabled: #111;
+    --border: #c300ff ;
+    --accent: #c300ff;
+      --code: #f06292;
+      --preformatted: #ccc;
+      --disabled: #111;
   }
   /* Add a bit of transparency so light media isn't so glaring in dark mode */
   img,
