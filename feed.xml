@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Garrett Brown</title>
+		<description>Garrett Brown</description>
+		<pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
+		<link>http://saladhax.site/blog</link>
+		<atom:link href="http://fetchrss.com/rss/64c3f8dd3f1ac844db725fc264c3f8bb0f4e0059d85ae4f2.xml" rel="self" type="application/rss+xml"/>
+		<generator>https://fetchrss.com</generator>
+		<image>
+			<link>http://saladhax.site/blog</link>
+			<url>https://www.google.com/s2/favicons?domain=http://saladhax.site</url>
+			<title>Garrett Brown</title>
+		</image>
+
+		<item>
+			<title>The Magic of Old Media Formats</title>
+			<link>https://saladhax.site/posts/old-media-formats.html</link>
+			<description><![CDATA[<br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="https://fetchrss.com" target="_blank">FetchRSS</a>)</span>]]></description>
+			<pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
+			<guid isPermaLink="false">https://saladhax.site/posts/old-media-formats.html</guid>
+		</item>
+		<item>
+			<title>Google Locking Up the Web with DRM</title>
+			<link>https://saladhax.site/posts/google-drm.html</link>
+			<description><![CDATA[<br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="https://fetchrss.com" target="_blank">FetchRSS</a>)</span>]]></description>
+			<pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+			<guid isPermaLink="false">https://saladhax.site/posts/google-drm.html</guid>
+		</item>
+		<item>
+			<title>The Old Computer Challenge Part 1: Planning My Setup</title>
+			<link>https://saladhax.site/posts/old-computer-challenge-p1.html</link>
+			<description><![CDATA[<br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="https://fetchrss.com" target="_blank">FetchRSS</a>)</span>]]></description>
+			<pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+			<guid isPermaLink="false">https://saladhax.site/posts/old-computer-challenge-p1.html</guid>
+		</item>
+		<item>
+			<title>Workarounds don't work for everyone.</title>
+			<link>https://saladhax.site/posts/workarounds-dont-work.html</link>
+			<description><![CDATA[<br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="https://fetchrss.com" target="_blank">FetchRSS</a>)</span>]]></description>
+			<pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
+			<guid isPermaLink="false">https://saladhax.site/posts/workarounds-dont-work.html</guid>
+		</item>
+		<item>
+			<title>A Case for Immutable Linux Distros</title>
+			<link>https://saladhax.site/posts/immutable-distros.html</link>
+			<description><![CDATA[<br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="https://fetchrss.com" target="_blank">FetchRSS</a>)</span>]]></description>
+			<pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
+			<guid isPermaLink="false">https://saladhax.site/posts/immutable-distros.html</guid>
+		</item>
+
+	</channel>
+</rss>
