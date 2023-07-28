@@ -13,8 +13,8 @@
   --accent-bg: #000000;
   --text: #dcdcdc;
   --text-light: #ababab;
-  --border: #ff0000;
-  --accent: #ff0000;
+  --border: #c300ff ;
+  --accent: #c300ff;
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
@@ -667,10 +667,10 @@ dialog::backdrop {
   cursor: pointer;
 }
 
-.notice {
+notice {
   background: var(--accent-bg);
   border: 2px solid var(--border);
   border-radius: 5px;
-  padding: 1.5rem;
-  margin: 2rem 0;
+  padding: 1rem;
+  margin: 1rem 0;
 }
