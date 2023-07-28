@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Garrett Brown</title>
+    <link rel="stylesheet" href="simple.css">
+</head>
+<header>
+  <h2>Garrett Brown</h2>
+  <p>Hack the planet! (Ethically, of course)</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="tools.html">Tools</a>
+        <a href="blog.html">Blog</a>
+    </nav>
+</header>
+
+<body>
+    <h2>Hi! I'm Garrett!</h2>
+    <p>I'm a cybersecurity student, IT Consultant and ethical hacker from the Midwestern United States.</p>
+
+    <h3>Check out some fun projects and tools!</h3>
+    <p>While this mainly acts as my personal website, it also contains a lot of cool tools and projects. Feel free to check them out!</p>
+
+    <h3>Blog</h3>
+    <p>I also host a blog here! I hop on and write about anything that interest me (usually tech) so feel free to give it a read!</p>
+
+    <h3>Contact Me!</h3>
+    <p>If you want to get in touch with me, you can do so through one of the following means:</p>
+    <h4>Email</h4>
+    <p>If you would like to contact me, you can use the email below (changes every once in a while) to get in touch! I
+        will try to reply in a timely manner.</p>
+    <h5><a href="mailto:gbro.jhie5@aleeas.com">gbro.jhie5@aleeas.com</a></h5>
+    <p>Alternatively, if you would like the message to be secured using PGP (whether it's because the information is
+        sensitive or just for the sake of privacy) you can use the submit form below! (I made it myself :D)</p>
+    <input type="text" id="address" placeholder="Enter email address (so I can reply)">
+    <textarea placeholder="Enter message..." id="message"></textarea>
+    <button type="submit" onclick="encryptMsg()">Send</button>
+</body>
+<footer>
+    <a href="https://512kb.club"><img class="badge" title="Proud member of the 512KB Club!" src="assets/512kb.png"></a>
+    <a href="https://firefox.com"><img class="badge" title="Yes, this works on Firefox!" src="assets/firefox.png"></a>
+    <a href="https://wiby.me"><img class="badge" title="Search sites made by people!" src="assets/wiby.png"></a>
+    <a href="https://thewebisfucked.com"><img class="badge" title="Keep the web free and open!" src="assets/freeweb.png"></a>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img class="badge" title="This site is available under Creative Commons BY-SA 4.0 unless stated otherwise." src="assets/by-sa.png"></a>
+</footer>
+<script src="openpgp.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    async function encryptMsg() {
+        const keyArmored = `-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEZENoyxYJKwYBBAHaRw8BAQdApqaxQd4/8n5IcIxVyGCyv0PFakLfjeedCOL9
+GR5r2qy0IUdhcnJldHQgQnJvd24gPGdqYnJvd25AcHJvdG9uLm1lPoiZBBMWCgBB
+FiEE3jlJ01ZrBckZRBsgs4lj2ov9wH4FAmRDaMsCGwMFCQPDEMUFCwkIBwICIgIG
+FQoJCAsCBBYCAwECHgcCF4AACgkQs4lj2ov9wH5Q5QEAlUwXlK5xpw7hZIYkmhTd
+sdY89k0+GBtsXZUjPC6Tn8YA/1GrED1N8WX+K2cPEMv5HnqYKkRRcoEtV6KkoJQP
+NZIDuDgEZENoyxIKKwYBBAGXVQEFAQEHQOYj/7m2FxLFoAjqr177rG2VNOfiQyhi
+Vfu/FQBCg7RhAwEIB4h+BBgWCgAmFiEE3jlJ01ZrBckZRBsgs4lj2ov9wH4FAmRD
+aMsCGwwFCQPDEMUACgkQs4lj2ov9wH4fvQEAm/N6mfWpUb+bVkyaRoAlf82hwHkl
+GyVzE0YZWG1cI+gBAKSCOQ1HgH3u1c86bRZPdkIasb1vfx9m44Ua3Aqq9WkP
+=rl/s
+-----END PGP PUBLIC KEY BLOCK-----`; //Your PGP Public Key
+
+        var input = document.getElementById("message").value;
+        var address = document.getElementById("address").value;
+        var fullInput = address.concat(input);
+        const pubkey = await openpgp.readKey({ armoredKey: keyArmored });
+        const message = await openpgp.createMessage({ text: fullInput });
+        const encrypted = await openpgp.encrypt({
+            message,
+            encryptionKeys: pubkey
+        });
+        console.log(encrypted);
+        Email.send({
+            SecureToken: "3f24adcf-1a23-429b-a2a2-76b3b1bcd7c6",
+            To : 'gbro.jhie5@aleeas.com',
+            From : "saladhax@sdf.org",
+            Subject : "You've got (encrypted) mail from your PGPortal!",
+            Body : encrypted
+        }).then(
+            message => alert(message)
+        );
+
+    }
+</script>
+
+</html>

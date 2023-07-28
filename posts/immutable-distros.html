@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Magic of Old Media Formats | Garrett Brown</title>
+    <link rel="stylesheet" href="../simple.css">
+</head>
+<header>
+    <h2>Garrett Brown</h2>
+    <p>Hack the planet! (Ethically, of course)</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../tools.html">Tools</a>
+        <a href="../blog.html">Blog</a>
+    </nav>
+</header>
+
+<body>
+    <h1>A Case for Immutable Linux Distros</h1>
+    <p>One of the biggest new trends to hit the desktop Linux world is immutable distros. If you listen to any podcasts or watch any videos related to Linux, you&#39;ve probably heard about them at least once, if not a few times. I&#39;ve heard and experienced mostly great things about immutable distros, but I have also heard some criticisms about them. I have officially switched to Fedora Sodalite (Kinoite with the <a href="https://github.com/sodaliterocks/sodalite">Sodalite</a> image applied to it) on my Framework Laptop, and wanted to share my thoughts about what makes immutable distros so great.</p>
+<p>If you haven&#39;t heard of these, or you just need a bit of a refresher, the concept of an immutable OS is based around the idea that a lot of the more critical files and directories are read only. This means you can&#39;t simply get into a file somewhere in a system directory and change it without a special tool. When applied to Linux, this means all but a few directories on root (like /home and /etc) can&#39;t be written to normally. This makes the system a bit more stable, as it is much harder to break your system by accidentally editing a file incorrectly or having a program break something somewhere.</p>
+<p>This means for the most part, programs are run in containers. A lot of the apps you run, especially graphical ones will usually be installed via Flatpak. Otherwise, immutable distros will usually have the ability to create a container for a given system like Fedora or Arch, and supply a normal environment running just about any program. This is similar to how it works in MacOS (minus the container thing unless I am missing something.) And of course, you can still install programs and make changes directly to your system, but usually this requires a tool like OSTree or ABRoot, which will create a new image containing the modified system, and will load it after rebooting. This also usually allows you to revert back to older images, meaning that if you do end up breaking something, you can easily just revert back to a working system.</p>
+<p>A lot of people find this idea interesting, while some others feel like it&#39;s locking things down too much and taking away their ability to customize their systems. I can kind of understand this if you are really into customizing your system down to the letter. For the record, there are a lot of ways that you can customize immutable distros, such as building you own custom images, or using OSTree or ABRoot to customize more general distros, but I can still see why this might not be appealing to some people. But I also don&#39;t think immutable distros are really meant for that kind of Linux user.</p>
+<p>I believe that immutable distros are made for people who want a rock-solid system that has less of a chance of breaking on them. For example, I switched to immutable Fedora on my main laptop because that is where I do most of my work as a student. And as someone who likes to tinker around with stuff a lot, I found that sometimes my system would sometimes get kind of wonky, and on occasion I have even broken stuff, causing me to have to back things up and re-install my distro. That&#39;s not something I really want for my laptop that I use for just about everything, including my coursework. For my customizing itch, I just have an old but working desktop (or rather an old laptop motherboard I threw in an old case) to tinker around and distro-hop on, and my laptop will just be the solid system I can do my work on.</p>
+<p>I also think that immutable distros can be a good option for normal users. I believe that an immutable distro could make Linux more approachable to less technical users, because you can just install Flatpaks from the Software app, and never touch the terminal sicne a lot of the system stuff is just set in stone. It also makes it a little harder to potentially break things because the system is read only. The way I see it, something like Fedora Silverblue could easilly be a good FOSS alternative to MacOS for most users.</p>
+<p>So while some people don&#39;t like the idea of immutable distros, I think that they definitely have their place. And that&#39;s the magic of Linux being an open source project. There can be immutable distros for those who want something more stable that just works, customizable distros for those who want to tinker to their hearts content, and other distros for whatever people need in an operating system. Regardless of what your thoughts on immutable distros are, I think they are definitely here to stay.</p>
+</body>
+<footer>
+    <a href="https://512kb.club"><img class="badge" title="Proud member of the 512KB Club!" src="../assets/512kb.png"></a>
+    <a href="https://firefox.com"><img class="badge" title="Yes, this works on Firefox!" src="../assets/firefox.png"></a>
+    <a href="https://wiby.me"><img class="badge" title="Search sites made by people!" src="../assets/wiby.png"></a>
+    <a href="https://thewebisfucked.com"><img class="badge" title="Keep the web free and open!" src="../assets/freeweb.png"></a>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img class="badge" title="This site is available under Creative Commons BY-SA 4.0 unless stated otherwise." src="../assets/by-sa.png"></a>
+</footer>
+</html>
